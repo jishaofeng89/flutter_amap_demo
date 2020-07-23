@@ -1,7 +1,14 @@
+import 'package:amap_all_fluttify/amap_all_fluttify.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_amap_demo/ui/amap/amap_demo_01.dart';
 
-void main() {
+void main() async{
   runApp(MyApp());
+  await enableFluttifyLog(false);
+  await AmapService.init(
+    iosKey: '',
+    androidKey: '6a07b8e2ec224a7e83cf7cd81f512552',
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -26,7 +33,8 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: AmapDemo01(),
     );
   }
 }
