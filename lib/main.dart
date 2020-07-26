@@ -1,6 +1,7 @@
 import 'package:amap_all_fluttify/amap_all_fluttify.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_amap_demo/ui/amap/amap_demo_01.dart';
+import 'package:flutter_amap_demo/ui/demo_list_page.dart';
 
 void main() async{
   runApp(MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: AmapDemo01(),
+      home: DemoListPage(),
     );
   }
 }
